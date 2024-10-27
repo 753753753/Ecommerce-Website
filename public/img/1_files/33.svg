@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg viewBox="0 0 935 1210" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<style type="text/css"><![CDATA[
+.g0_33{
+fill: #000;
+}
+.g1_33{
+fill: #FFF;
+}
+.g2_33{
+fill: none;
+stroke: #000;
+stroke-width: 1.145;
+stroke-linecap: round;
+stroke-miterlimit: 8;
+}
+]]></style>
+</defs>
+<path d="M393.6,129.4H541.4v-.9H393.6v.9Z" class="g0_33"/>
+<path fill-rule="evenodd" d="M229.2,478.3h27.5V464.5H229.2v13.8Z" class="g1_33"/>
+<path d="M229.2,478.3h27.5V464.5H229.2v13.8Z" class="g2_33"/>
+<path fill-rule="evenodd" d="M375.9,478.3h27.5V464.5H375.9v13.8Z" class="g1_33"/>
+<path d="M375.9,478.3h27.5V464.5H375.9v13.8Z" class="g2_33"/>
+<path fill-rule="evenodd" d="M531.7,478.3h27.5V464.5H531.7v13.8Z" class="g1_33"/>
+<path d="M531.7,478.3h27.5V464.5H531.7v13.8Z" class="g2_33"/>
+<path fill-rule="evenodd" d="M687.5,478.3H715V464.5H687.5v13.8Z" class="g1_33"/>
+<path d="M687.5,478.3H715V464.5H687.5v13.8Z" class="g2_33"/>
+<path fill-rule="evenodd" d="M210.9,574h27.5V560.2H210.9V574Z" class="g1_33"/>
+<path d="M210.9,574h27.5V560.2H210.9V574Z" class="g2_33"/>
+<path fill-rule="evenodd" d="M412.5,574H440V560.2H412.5V574Z" class="g1_33"/>
+<path d="M412.5,574H440V560.2H412.5V574Z" class="g2_33"/>
+<path d="M36.7,41.2h4.6V36.7H36.7v4.5Z" class="g0_33"/>
+<path d="M36.7,41.2h4.6V36.7H36.7v4.5Z" class="g0_33"/>
+<path d="M41.3,41.2H893.7V36.7H41.3v4.5Z" class="g0_33"/>
+<path d="M893.7,41.2h4.6V36.7h-4.6v4.5Z" class="g0_33"/>
+<path d="M893.7,41.2h4.6V36.7h-4.6v4.5Z" class="g0_33"/>
+<path d="M36.7,1168.7h4.6V41.2H36.7V1168.7Z" class="g0_33"/>
+<path d="M893.7,1168.7h4.6V41.2h-4.6V1168.7Z" class="g0_33"/>
+<path d="M36.7,1173.2h4.6v-4.5H36.7v4.5Z" class="g0_33"/>
+<path d="M36.7,1173.2h4.6v-4.5H36.7v4.5Z" class="g0_33"/>
+<path d="M41.3,1173.2H893.7v-4.5H41.3v4.5Z" class="g0_33"/>
+<path d="M893.7,1173.2h4.6v-4.5h-4.6v4.5Z" class="g0_33"/>
+<path d="M893.7,1173.2h4.6v-4.5h-4.6v4.5Z" class="g0_33"/>
+</svg>
