@@ -93,14 +93,6 @@ const CategoryPage = () => {
 
   return (
     <div className="flex h-screen">
-      {/* Toggle Button */}
-      <button
-        className="md:block p-2 text-lg bg-gray-200 rounded-md m-4 z-50 cursor-pointer"
-        onClick={() => setSidebarOpen(!sidebarOpen)}
-      >
-        <BiMenu className = "text-secondary"/>
-      </button>
-
       {/* Sidebar (Filter Section) */}
       <div
         className={`fixed inset-0 bg-gray-800 bg-opacity-50 transition-opacity duration-300 ${sidebarOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`}
@@ -108,8 +100,9 @@ const CategoryPage = () => {
       ></div>
       <div
         className={`fixed left-0 top-0 w-64 h-full bg-gray-100 p-4 transform transition-transform duration-300 z-50 ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}`}
+        style={{ maxHeight: '80vh', overflowY: 'auto' }}
       >
-       <IoClose className = "text-secondary cursor-pointer md:size-7" onClick={() => setSidebarOpen(!sidebarOpen)}/>
+        <IoClose className="text-secondary cursor-pointer md:size-7" onClick={() => setSidebarOpen(!sidebarOpen)} />
         <Sidebar
           categories={categories}
           prices={prices}
@@ -118,10 +111,22 @@ const CategoryPage = () => {
           onFilterChange={handleFilterChange}
         />
       </div>
-
+  
       {/* Products Section */}
       <div className={`flex-1 p-4 overflow-y-scroll h-full transition-opacity duration-300 ${sidebarOpen ? "opacity-50" : "opacity-100"}`}>
-        <h1 className="text-2xl font-bold mb-4">Products</h1>
+      <div className="flex items-center mb-4">
+  {/* Toggle Button (Menu Icon) */}
+  <button
+    className="p-2 text-lg bg-gray-200 rounded-md mr-2 cursor-pointer"
+    onClick={() => setSidebarOpen(!sidebarOpen)}
+  >
+    <BiMenu className="text-secondary" />
+  </button>
+
+  {/* Products Heading */}
+  <h1 className="text-2xl font-bold">Products</h1>
+</div>
+  
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {filteredProducts.map(product => (
             <ProductCard key={product.id} product={product} />
@@ -130,6 +135,7 @@ const CategoryPage = () => {
       </div>
     </div>
   );
+  
 };
 
 export default CategoryPage;
