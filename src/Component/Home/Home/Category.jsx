@@ -93,12 +93,17 @@ const Card = ({ id, text, icon, onSelect , isselectdata}) => {
     onSelect(text); // Call the onSelect prop when card is clicked
   };
   return (
-    <div className={`m-4 p-4 border rounded-md shadow-md w-full md:w-[8.25rem] justify-center text-center hover:bg-secondary ${isselectdata ? 'bg-secondary text-white' : 'bg-white'} cursor-pointer hover:text-white`} onClick={handleClick}>
-      <div className="justify-center flex">
-        {renderIcon()}
-      </div>
-      <p className='font-poppins text-base font-regular leading-6 mt-2'>{text}</p>
+<div 
+  className={`m-4 p-4 border rounded-md shadow-md w-[10rem] md:w-[8.25rem] flex flex-col items-center text-center hover:bg-secondary ${isselectdata ? 'bg-secondary text-white' : 'bg-white'} cursor-pointer hover:text-white`} 
+  onClick={handleClick}
+>
+  <div className="flex justify-center mb-2">
+    <div className="w-8 h-8 md:w-12 md:h-12"> {/* Adjust icon size here */}
+      {renderIcon()}
     </div>
+  </div>
+  <p className='font-poppins text-base font-normal leading-6'>{text}</p>
+</div>
   );
 };
 

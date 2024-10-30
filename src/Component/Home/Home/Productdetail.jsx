@@ -120,7 +120,7 @@ function Productdetail() {
                             ))}
                         </div>
                     </div>
-                    <div className="flex flex-col gap-4 lg:w-2/4">
+                    <div className="flex flex-col gap-4 lg:w-2/4 md:text-sm p-3 text-[12px]">
                         <div>
                             <span className="text-pink-600 font-semibold">{product?.category}</span>
                             <h1 className="text-3xl font-bold">{product?.title}</h1>

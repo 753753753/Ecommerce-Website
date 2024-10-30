@@ -76,7 +76,7 @@ function Login() {
       <div className="flex flex-col md:flex-row h-screen">
         {/* Image Section */}
         <div className="md:w-1/2 flex justify-center items-center">
-          <img src={signupImage} alt="Signup" className="h-auto max-h-full max-w-full" />
+          <img src={signupImage} alt="Signup" className="h-auto md:max-h-full md:max-w-full w-[40rem]" />
         </div>
 
         {/* Form Section */}
