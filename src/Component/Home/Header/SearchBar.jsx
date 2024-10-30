@@ -26,7 +26,7 @@ function SearchBar() {
 
     return (
         <div>
-            <div className="">
+            <div className="mt-2 md:mt-0 lg:mt-0 xl:mt-0">
                 {/* search input */}
                 <div className="input flex justify-center">
                     <input
@@ -34,7 +34,7 @@ function SearchBar() {
                         placeholder='Search here'
                         value={search}
                         onChange={handleSearchChange}
-                        className=' bg-gray-200 placeholder-gray-400 rounded-lg px-2 py-2 xl:w-96 w-96 lg:w-80 md:w-96 outline-none text-black '
+                        className=' bg-gray-200 placeholder-gray-400 rounded-lg px-2 py-2 xl:w-96 w-72 lg:w-80 md:w-96 outline-none text-black'
                     />
                 </div>
                 {/* search drop-down */}

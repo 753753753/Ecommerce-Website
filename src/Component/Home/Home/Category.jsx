@@ -94,11 +94,11 @@ const Card = ({ id, text, icon, onSelect , isselectdata}) => {
   };
   return (
 <div 
-  className={`m-4 p-4 border rounded-md shadow-md w-[10rem] md:w-[8.25rem] flex flex-col items-center text-center hover:bg-secondary ${isselectdata ? 'bg-secondary text-white' : 'bg-white'} cursor-pointer hover:text-white`} 
+  className={`m-4 p-4 border rounded-md shadow-md w-[7.5rem] md:w-[8.25rem] flex flex-col items-center text-center hover:bg-secondary ${isselectdata ? 'bg-secondary text-white' : 'bg-white'} cursor-pointer hover:text-white`} 
   onClick={handleClick}
 >
   <div className="flex justify-center mb-2">
-    <div className="w-8 h-8 md:w-12 md:h-12"> {/* Adjust icon size here */}
+    <div className="md:w-12 md:h-12"> {/* Adjust icon size here */}
       {renderIcon()}
     </div>
   </div>
