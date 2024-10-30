@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { BiMenu } from 'react-icons/bi';
+import { IoClose } from 'react-icons/io5'; // Import close icon
 import { useData } from '../../../context/myContext';
 import ProductCard from './ProductCard';
 import Sidebar from './Sidebar';
@@ -14,6 +16,7 @@ const CategoryPage = () => {
   const [selectedBrands, setSelectedBrands] = useState([]);
   const [availableBrands, setAvailableBrands] = useState([]);
   const [availableColors, setAvailableColors] = useState([]);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const handleFilterChange = (filterType, filterValue) => {
     switch (filterType) {
@@ -90,8 +93,23 @@ const CategoryPage = () => {
 
   return (
     <div className="flex h-screen">
+      {/* Toggle Button */}
+      <button
+        className="md:block p-2 text-lg bg-gray-200 rounded-md m-4 z-50 cursor-pointer"
+        onClick={() => setSidebarOpen(!sidebarOpen)}
+      >
+        <BiMenu className = "text-secondary"/>
+      </button>
+
       {/* Sidebar (Filter Section) */}
-      <div className="w-64 h-full overflow-y-scroll p-4 bg-gray-100">
+      <div
+        className={`fixed inset-0 bg-gray-800 bg-opacity-50 transition-opacity duration-300 ${sidebarOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+        onClick={() => setSidebarOpen(false)} // Close sidebar when clicking outside
+      ></div>
+      <div
+        className={`fixed left-0 top-0 w-64 h-full bg-gray-100 p-4 transform transition-transform duration-300 z-50 ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}`}
+      >
+       <IoClose className = "text-secondary cursor-pointer md:size-7" onClick={() => setSidebarOpen(!sidebarOpen)}/>
         <Sidebar
           categories={categories}
           prices={prices}
@@ -100,11 +118,11 @@ const CategoryPage = () => {
           onFilterChange={handleFilterChange}
         />
       </div>
-      
+
       {/* Products Section */}
-      <div className="flex-1 p-4 overflow-y-scroll h-full">
+      <div className={`flex-1 p-4 overflow-y-scroll h-full transition-opacity duration-300 ${sidebarOpen ? "opacity-50" : "opacity-100"}`}>
         <h1 className="text-2xl font-bold mb-4">Products</h1>
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
           {filteredProducts.map(product => (
             <ProductCard key={product.id} product={product} />
           ))}
